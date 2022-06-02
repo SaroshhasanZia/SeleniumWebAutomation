@@ -257,6 +257,7 @@ public class functions {
     public static void scrollDown() {
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+        //hello this is a useless comment
         String url = elementBy(facebookButton).getAttribute("href");
         driver.navigate().to(url);
 
