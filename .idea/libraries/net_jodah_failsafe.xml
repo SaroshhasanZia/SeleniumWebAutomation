@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="net.jodah.failsafe" type="repository">
+    <properties maven-id="net.jodah:failsafe:1.0.4" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/jodah/failsafe/1.0.4/failsafe-1.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
