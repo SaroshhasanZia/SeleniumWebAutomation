@@ -27,7 +27,7 @@ public class Locators {
     public static By countryDropdown = By.xpath("//select[@id=\"Country\"]");
     public static By inputPhoneNumber = By.xpath("//input[@id=\"Phone\"]");
     public static By scrollForInterest = By.xpath("//label[@for=\"productInterest\"]");
-    public static By mobileTestingCheck = By.xpath("//label[@for=\"mktoCheckbox_29473_5\"]");
+    public static By mobileTestingCheck = By.xpath("//label[@for=\"mktoCheckbox_30797_1\"]");
     public static By hearAboutUsTextBox = By.xpath("//textarea[@id=\"How_did_you_hear_about_Sauce_Labs__c\"]");
     public static By commentTextBox = By.xpath("//textarea[@id=\"Sales_Contact_Comments__c\"]");
     public static By consentCheckBox = By.xpath("//input[@name=\"sauceLabsContactConsent\"]");
