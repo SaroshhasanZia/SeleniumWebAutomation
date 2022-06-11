@@ -32,10 +32,10 @@ public class BaseTest {
     }
 
     @AfterSuite
-    public static void afterMethod(){
-        System.out.println("After Suite executing...");
-        driver.close();
-        System.out.println("driver closed");
+    public static <handle> void afterMethod(){
+    closeAllTab();
+
+    System.out.println("driver closed");
     }
 
 

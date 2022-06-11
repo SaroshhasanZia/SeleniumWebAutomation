@@ -1,12 +1,16 @@
 package general;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.JavascriptExecutor.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.io.FileUtils;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,6 +18,8 @@ import java.sql.Statement;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 import static browserFactory.BrowserDriver.webDriver;
 import static object.Locators.*;
@@ -306,7 +312,7 @@ public class functions {
 
 //    }
 
-    public static void scrollUntill(By locator) {
+    public static void scrollAndClick(By locator) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         int i = 0;
@@ -324,6 +330,40 @@ public class functions {
             i+=1;
         }
     }
+
+
+    public static int randomNumber(){
+        Random rand = new Random();
+
+        // Generate random integers in range 0 to 999
+        int rand_int = rand.nextInt(1000);
+        return rand_int;
+    }
+
+
+
+
+    public static void getScreenShot() throws IOException {
+        TakesScreenshot scr = (TakesScreenshot) driver;
+        File scrFile = scr.getScreenshotAs(OutputType.FILE);
+        File dest = new  File("/home/vend-sarosh/Documents/Web/Selenium/screenshots/file"+randomNumber()+".jpg");
+
+        FileUtils.copyFile(scrFile, dest);
+
+
+
+
+    }
+
+    public static  void closeAllTab(){
+        Set<String> w = driver.getWindowHandles();
+        for (String i : w){
+            driver.switchTo().window(i);
+            driver.close();
+
+        }
+    }
+
 
 }
 

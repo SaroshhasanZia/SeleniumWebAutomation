@@ -9,6 +9,8 @@ import static general.EnvGlobals.*;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 
 public class MultipleTest extends BaseTest  {
     public static String name = "Sarosh";
@@ -25,9 +27,10 @@ public class MultipleTest extends BaseTest  {
 
 
     @Test(description="")
-    public static void multipleTestCases() throws InterruptedException {
+    public static void multipleTestCases() throws InterruptedException, IOException {
         implicitWait();
         login(username,password);
+        getScreenShot();
         click(elementBy(menuButton));
         click(elementBy(about));
         hoverAndClick(contact,contactSales);
@@ -44,7 +47,7 @@ public class MultipleTest extends BaseTest  {
         click(elementBy(mobileTestingCheck));
         sendKeys(elementBy(hearAboutUsTextBox),hearAboutUs);
         sendKeys(elementBy(commentTextBox),comments);
-        scrollUntill(consentCheckBox);
+        scrollAndClick(consentCheckBox);
 
 
  //       ScrollTo(consentCheckBox);
@@ -52,12 +55,12 @@ public class MultipleTest extends BaseTest  {
         //explicitWait(consentCheckBox);
    //     click(elementBy(consentCheckBox));
         navigateBack();
-        scrollUntill(facebookButton);
+        scrollAndClick(facebookButton);
     //    click(elementBy(facebookButton));
 
 
 
-        sleep(3000);
+
         //click(elementBy(facebookButton));
 
 
