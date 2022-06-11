@@ -9,8 +9,10 @@ import static general.EnvGlobals.*;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 
-public class MultipleTest extends BaseTest {
+
+public class MultipleTest extends BaseTest  {
     public static String name = "Sarosh";
     public static String lastName = "Hasan Zia";
     public static String CompanyName = "VD";
@@ -20,13 +22,15 @@ public class MultipleTest extends BaseTest {
     public static String phoneNumber = "090078601";
     public static String hearAboutUs = "Testing QA demo ";
     public static String comments = " Testing comments ";
+    public static By loc = By.xpath("//div[@class=\"navFooterLinkCol navAccessibility\"]//div[text()=\"Get to Know Us\"]");
 
 
 
     @Test(description="")
-    public static void multipleTestCases() throws InterruptedException {
+    public static void multipleTestCases() throws InterruptedException, IOException {
         implicitWait();
         login(username,password);
+        getScreenShot();
         click(elementBy(menuButton));
         click(elementBy(about));
         hoverAndClick(contact,contactSales);
@@ -38,21 +42,46 @@ public class MultipleTest extends BaseTest {
         selectElement(countryDropdown,country);
         sendKeys(elementBy(inputPhoneNumber),phoneNumber);
         ScrollTo(scrollForInterest);
-      sleep(3000);
+//      sleep(3000);
+        explicitWait(mobileTestingCheck);
         click(elementBy(mobileTestingCheck));
         sendKeys(elementBy(hearAboutUsTextBox),hearAboutUs);
         sendKeys(elementBy(commentTextBox),comments);
-        click(elementBy(consentCheckBox));
-        navigateBack();
-        scrollDown();
+        scrollAndClick(consentCheckBox);
 
-        sleep(3000);
+
+ //       ScrollTo(consentCheckBox);
+//        ScrollTo(consentCheckBox);
+        //explicitWait(consentCheckBox);
+   //     click(elementBy(consentCheckBox));
+        navigateBack();
+        scrollAndClick(facebookButton);
+    //    click(elementBy(facebookButton));
+
+
+
+
         //click(elementBy(facebookButton));
 
 
 
     }
 
+//    @Test
+//    public static void facebook(){
+//        browseUrl("https://www.amazon.com/");
+//        maximizeBrowser();
+//        explicitWait(loc);
+//        moveTo(loc);
+//
+//    }
+//    @Test
+//    public static void facebookas(){
+//        browseUrl("https://www.amazon.com/");
+//        maximizeBrowser();
+//        ScrollTo(loc);
+
+//    }
 
 
 }

@@ -1,15 +1,16 @@
 package general;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.JavascriptExecutor.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.io.FileUtils;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,6 +18,8 @@ import java.sql.Statement;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 import static browserFactory.BrowserDriver.webDriver;
 import static object.Locators.*;
@@ -245,7 +248,7 @@ public class functions {
 
     public static void ScrollTo(By locator){
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", elementBy(locator));
+        js.executeScript("arguments[0].scrollIntoView(true);", elementBy(locator));
 
 
     }
@@ -263,6 +266,105 @@ public class functions {
 
 
     }
+
+    public static void moveTo(By locator){
+
+        Actions a = new Actions(driver);
+        a.moveToElement(elementBy(locator));
+        a.perform();
+
+    }
+
+//    public static void scrollUntill(By locator){
+//
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        Duration d = Duration.ofSeconds(3);
+//        WebDriverWait wait = new WebDriverWait(driver,d);
+//        int i = 1;
+//
+//        while(i<5) {
+//            js.executeScript("window.scrollBy(0,100)");
+////            try {
+////                wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+////
+////            }
+////
+////            catch (TimeoutException t){
+////                throw new RuntimeException(t);
+////            }
+//            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+//
+//            if(element!=null){
+//                break;
+//            }
+//            i += 1;
+//
+//
+//
+//
+//
+//        }
+
+
+
+
+
+
+//    }
+
+    public static void scrollAndClick(By locator) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        int i = 0;
+
+        while (i < 5) {
+
+            js.executeScript("window.scrollBy(0,100)");
+            try {
+                click(elementBy(locator));
+                System.out.println("Element is clickable");
+                break;
+            } catch (ElementClickInterceptedException e) {
+                System.out.println("Element isn't clickable");
+            }
+            i+=1;
+        }
+    }
+
+
+    public static int randomNumber(){
+        Random rand = new Random();
+
+        // Generate random integers in range 0 to 999
+        int rand_int = rand.nextInt(1000);
+        return rand_int;
+    }
+
+
+
+
+    public static void getScreenShot() throws IOException {
+        TakesScreenshot scr = (TakesScreenshot) driver;
+        File scrFile = scr.getScreenshotAs(OutputType.FILE);
+        File dest = new  File("/home/vend-sarosh/Documents/Web/Selenium/screenshots/file"+randomNumber()+".jpg");
+
+        FileUtils.copyFile(scrFile, dest);
+
+
+
+
+    }
+
+    public static  void closeAllTab(){
+        Set<String> w = driver.getWindowHandles();
+        for (String i : w){
+            driver.switchTo().window(i);
+            driver.close();
+
+        }
+    }
+
+
 }
 
 
