@@ -8,8 +8,8 @@
 image: maven:3.6.3
 
 pipelines:
-  default:
-    - parallel:
+  branches:
+    jenkinsIntegration:
       - step:
           name: Build and Test
           caches:
