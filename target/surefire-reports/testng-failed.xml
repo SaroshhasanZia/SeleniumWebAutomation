@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Phase1 Suite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="Login And Logout(failed)" verbose="0">
+  <test thread-count="5" name="Login Cases(failed)" verbose="0">
     <classes>
       <class name="TestCases.login">
         <methods>
-          <include name="loginWithValidCreds"/>
           <include name="beforeMethod"/>
+          <include name="loginWithValidCreds"/>
           <include name="loginWithInvalidCreds"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- TestCases.login -->
     </classes>
-  </test> <!-- Login And Logout(failed) -->
+  </test> <!-- Login Cases(failed) -->
 </suite> <!-- Failed suite [Phase1 Suite] -->

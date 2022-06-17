@@ -9,8 +9,6 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,12 +19,18 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-import static browserFactory.BrowserDriver.webDriver;
+import static config.browserFactory.BrowserDriver.webDriver;
 import static object.Locators.*;
 import static org.openqa.selenium.By.*;
 
 
 public class functions {
+
+
+
+
+
+
 
 
     public static WebDriver driver = webDriver();

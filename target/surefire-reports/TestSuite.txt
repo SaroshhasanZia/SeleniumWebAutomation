@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 2, Errors: 0, Skipped: 3, Time elapsed: 3.368 sec <<< FAILURE!
-beforeMethod(TestCases.login)  Time elapsed: 2.968 sec  <<< FAILURE!
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 3, Time elapsed: 62.079 sec <<< FAILURE!
+beforeMethod(TestCases.login)  Time elapsed: 61.912 sec  <<< FAILURE!
 java.lang.ExceptionInInitializerError: null
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
@@ -16,11 +16,11 @@ java.lang.ExceptionInInitializerError: null
 	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:108)
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:106)
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:93)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:48)
-	at browserFactory.BrowserDriver.browser(BrowserDriver.java:40)
-	at browserFactory.BrowserDriver.webDriver(BrowserDriver.java:25)
-	at general.functions.<clinit>(functions.java:32)
-	at general.BaseTest.beforeMethod(BaseTest.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82)
+	at config.browserFactory.BrowserDriver.browser(BrowserDriver.java:47)
+	at config.browserFactory.BrowserDriver.webDriver(BrowserDriver.java:26)
+	at general.functions.<clinit>(functions.java:36)
+	at general.BaseTest.beforeMethod(BaseTest.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -63,9 +63,9 @@ java.lang.ExceptionInInitializerError: null
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:95)
 
-afterMethod(TestCases.login)  Time elapsed: 0.16 sec  <<< FAILURE!
+afterMethod(TestCases.login)  Time elapsed: 0.049 sec  <<< FAILURE!
 java.lang.NoClassDefFoundError: Could not initialize class general.functions
-	at general.BaseTest.afterMethod(BaseTest.java:36)
+	at general.BaseTest.afterMethod(BaseTest.java:55)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

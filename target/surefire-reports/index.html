@@ -136,15 +136,13 @@
                   </a> <!-- loginWithInvalidCreds -->
                   <span class="method-name">loginWithInvalidCreds</span>
                   <div class="stack-trace">java.lang.ExceptionInInitializerError
-	at general.BaseTest.beforeMethod(BaseTest.java:29)
+	at general.BaseTest.beforeMethod(BaseTest.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
-  (unknown error: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: DevToolsActivePort file doesn&apos;t exist
 Build info: version: &apos;4.1.3&apos;, revision: &apos;7b1ebf28ef&apos;
-System info: host: &apos;Sarosh-450-G8&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-44-generic&apos;, java.version: &apos;11.0.15&apos;
+System info: host: &apos;Sarosh-450-G8&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-48-generic&apos;, java.version: &apos;11.0.15&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless, --no-sandbox, --disable-dev-shm-usage], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless, --no-sandbox, --disable-dev-shm-usage], extensions: []}}}]
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
@@ -157,10 +155,10 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:48)
-	at browserFactory.BrowserDriver.browser(BrowserDriver.java:40)
-	at browserFactory.BrowserDriver.webDriver(BrowserDriver.java:25)
-	at general.functions.&lt;clinit&gt;(functions.java:32)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at config.browserFactory.BrowserDriver.browser(BrowserDriver.java:47)
+	at config.browserFactory.BrowserDriver.webDriver(BrowserDriver.java:26)
+	at general.functions.&lt;clinit&gt;(functions.java:36)
 	... 42 more
 ... Removed 40 stack frames
 </div> <!-- stack-trace -->
@@ -174,15 +172,13 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
                   </a> <!-- loginWithValidCreds -->
                   <span class="method-name">loginWithValidCreds</span>
                   <div class="stack-trace">java.lang.ExceptionInInitializerError
-	at general.BaseTest.beforeMethod(BaseTest.java:29)
+	at general.BaseTest.beforeMethod(BaseTest.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
-  (unknown error: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: DevToolsActivePort file doesn&apos;t exist
 Build info: version: &apos;4.1.3&apos;, revision: &apos;7b1ebf28ef&apos;
-System info: host: &apos;Sarosh-450-G8&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-44-generic&apos;, java.version: &apos;11.0.15&apos;
+System info: host: &apos;Sarosh-450-G8&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-48-generic&apos;, java.version: &apos;11.0.15&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless, --no-sandbox, --disable-dev-shm-usage], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless, --no-sandbox, --disable-dev-shm-usage], extensions: []}}}]
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
@@ -195,10 +191,10 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:48)
-	at browserFactory.BrowserDriver.browser(BrowserDriver.java:40)
-	at browserFactory.BrowserDriver.webDriver(BrowserDriver.java:25)
-	at general.functions.&lt;clinit&gt;(functions.java:32)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at config.browserFactory.BrowserDriver.browser(BrowserDriver.java:47)
+	at config.browserFactory.BrowserDriver.webDriver(BrowserDriver.java:26)
+	at general.functions.&lt;clinit&gt;(functions.java:36)
 	... 42 more
 ... Removed 40 stack frames
 </div> <!-- stack-trace -->
@@ -218,7 +214,7 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Phase1 Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Login And Logout&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Login Cases&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestCases.login&quot;&gt;
         &lt;methods&gt;
@@ -227,7 +223,7 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- TestCases.login --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login And Logout --&gt;
+  &lt;/test&gt; &lt;!-- Login Cases --&gt;
 &lt;/suite&gt; &lt;!-- Phase1 Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -239,7 +235,7 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Login And Logout (1 class)</span>
+                <span class="test-name">Login Cases (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -267,11 +263,11 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginWithInvalidCreds')
+data.setCell(0, 1, 'loginWithValidCreds')
 data.setCell(0, 2, 'TestCases.login')
 data.setCell(0, 3, 0);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginWithValidCreds')
+data.setCell(1, 1, 'loginWithInvalidCreds')
 data.setCell(1, 2, 'TestCases.login')
 data.setCell(1, 3, 0);
 window.suiteTableData['Phase1_Suite']= { tableData: data, tableDiv: 'times-div-Phase1_Suite'}
@@ -305,29 +301,37 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.login</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">216 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithValidCreds</span>
-                <span class="method-start">2135 ms</span>
+                <span class="method-start">61305 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2141 ms</span>
+                <span class="method-start">61307 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithInvalidCreds</span>
-                <span class="method-start">2142 ms</span>
+                <span class="method-start">61308 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">61310 ms</span>
+              </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">2300 ms</span>
+                <span class="method-start">61356 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

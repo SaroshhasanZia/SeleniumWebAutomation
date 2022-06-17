@@ -3,7 +3,7 @@
 
 <suite name="Phase1 Suite">
 
-    <test name="Login And Logout">
+    <test name="Login Cases">
         <classes>
             <class name="TestCases.login">
                 <methods>
@@ -12,6 +12,14 @@
 
                 </methods>
             </class>
+
+
+<!--            <class name="Test">-->
+<!--                <methods>-->
+<!--                    <include name="test"></include>-->
+
+<!--                </methods>-->
+<!--            </class>-->
 
         </classes>
     </test>

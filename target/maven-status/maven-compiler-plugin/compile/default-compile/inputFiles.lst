@@ -6,7 +6,7 @@
 /home/vend-sarosh/Documents/Web/Selenium/src/main/java/TestCases/login.java
 /home/vend-sarosh/Documents/Web/Selenium/src/main/java/object/Locators.java
 /home/vend-sarosh/Documents/Web/Selenium/src/main/java/general/EnvGlobals.java
+/home/vend-sarosh/Documents/Web/Selenium/src/main/java/config/browserFactory/BrowserDriver.java
 /home/vend-sarosh/Documents/Web/Selenium/src/main/java/Test.java
-/home/vend-sarosh/Documents/Web/Selenium/src/main/java/browserFactory/BrowserDriver.java
 /home/vend-sarosh/Documents/Web/Selenium/src/main/java/TestCases/Cart.java
 /home/vend-sarosh/Documents/Web/Selenium/src/main/java/general/BaseTest.java

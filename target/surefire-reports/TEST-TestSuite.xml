@@ -1,65 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="3.128" tests="5" errors="0" skipped="3" failures="2">
+<testsuite name="TestSuite" time="61.961" tests="5" errors="0" skipped="3" failures="2">
   <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="11.0.15+10-Ubuntu-0ubuntu0.20.04.1"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/vend-sarosh/Documents/Web/Selenium"/>
-    <property name="java.vm.vendor" value="Private Build"/>
-    <property name="java.vendor.url" value="Unknown"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="path.separator" value=":"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="sun.os.patch.level" value="unknown"/>
-    <property name="user.country" value="US"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/vend-sarosh/Documents/Web/Selenium"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="11.0.15+10-Ubuntu-0ubuntu0.20.04.1"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
-    <property name="maven.conf" value="/usr/share/maven/conf"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="55.0"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="5.13.0-44-generic"/>
-    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
-    <property name="user.home" value="/var/lib/jenkins"/>
-    <property name="user.timezone" value="Asia/Karachi"/>
-    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="java.specification.version" value="11"/>
-    <property name="user.name" value="jenkins"/>
-    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
-    <property name="java.vm.specification.version" value="11"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -e"/>
-    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
-    <property name="user.language" value="en"/>
-    <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="11.0.15"/>
-    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="JOB_NAME" value="mavenJob"/>
     <property name="java.vendor" value="Private Build"/>
-    <property name="maven.home" value="/usr/share/maven"/>
-    <property name="file.separator" value="/"/>
-    <property name="java.version.date" value="2022-04-19"/>
-    <property name="java.vendor.url.bug" value="Unknown"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.cpu.endian" value="little"/>
+    <property name="PWD" value="/var/lib/jenkins"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="RUN_TESTS_DISPLAY_URL" value="http://localhost:8080/job/mavenJob/21/display/redirect?page=tests"/>
+    <property name="LC_TIME" value="ur_PK"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="JENKINS_HOME" value="/var/lib/jenkins"/>
+    <property name="PATH" value="/usr/lib/jvm/java-11-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"/>
+    <property name="HUDSON_SERVER_COOKIE" value="9112e28cd46584e1"/>
+    <property name="POM_ARTIFACTID" value="Selenium"/>
+    <property name="os.name" value="Linux"/>
+    <property name="EXECUTOR_NUMBER" value="1"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="POM_DISPLAYNAME" value="Selenium"/>
+    <property name="NODE_LABELS" value="built-in"/>
+    <property name="java.runtime.version" value="11.0.15+10-Ubuntu-0ubuntu0.20.04.1"/>
+    <property name="LC_NAME" value="ur_PK"/>
+    <property name="user.name" value="jenkins"/>
+    <property name="NOTIFY_SOCKET" value="/run/systemd/notify"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="LC_IDENTIFICATION" value="ur_PK"/>
+    <property name="LC_ADDRESS" value="ur_PK"/>
+    <property name="user.language" value="en"/>
+    <property name="JOB_BASE_NAME" value="mavenJob"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/mavenJob/21/display/redirect?page=changes"/>
+    <property name="BUILD_DISPLAY_NAME" value="#21"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.version" value="11.0.15"/>
+    <property name="user.timezone" value="Asia/Karachi"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="NODE_NAME" value="built-in"/>
+    <property name="BUILD_ID" value="21"/>
     <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="SHELL" value="/bin/bash"/>
+    <property name="maven.conf" value="/etc/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="LC_MONETARY" value="ur_PK"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="user.country" value="US"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="os.version" value="5.13.0-48-generic"/>
+    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/mavenJob/21/display/redirect"/>
+    <property name="POM_VERSION" value="1.0-SNAPSHOT"/>
+    <property name="sun.font.fontmanager" value="sun.awt.X11FontManager"/>
+    <property name="path.separator" value=":"/>
+    <property name="RUN_ARTIFACTS_DISPLAY_URL" value="http://localhost:8080/job/mavenJob/21/display/redirect?page=artifacts"/>
+    <property name="java.vm.version" value="11.0.15+10-Ubuntu-0ubuntu0.20.04.1"/>
+    <property name="LC_MEASUREMENT" value="ur_PK"/>
+    <property name="JOB_DISPLAY_URL" value="http://localhost:8080/job/mavenJob/display/redirect"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="JAVA_HOME" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="LOGNAME" value="jenkins"/>
+    <property name="POM_PACKAGING" value="jar"/>
+    <property name="HOME" value="/var/lib/jenkins"/>
+    <property name="POM_GROUPID" value="org.example"/>
+    <property name="user.home" value="/var/lib/jenkins"/>
+    <property name="BUILD_TAG" value="jenkins-mavenJob-21"/>
+    <property name="JENKINS_SERVER_COOKIE" value="9112e28cd46584e1"/>
+    <property name="HUDSON_URL" value="http://localhost:8080/"/>
+    <property name="java.version.date" value="2022-04-19"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="CLASSPATH" value=""/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vendor.url" value="Unknown"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main /usr/share/maven /var/cache/jenkins/war/WEB-INF/lib/remoting-4.13.jar /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar 41807"/>
+    <property name="java.class.path" value="/var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-agent-1.13.jar:/usr/share/maven/boot/plexus-classworlds-2.x.jar:/usr/share/maven/conf/logging"/>
+    <property name="JOURNAL_STREAM" value="8:41832"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PATH+JDK" value="/usr/lib/jvm/java-11-openjdk-amd64/bin"/>
+    <property name="INVOCATION_ID" value="3644f5923dc7473892d028ad18a94773"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="M2_HOME" value="/usr/share/maven"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="CI" value="true"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="HUDSON_HOME" value="/var/lib/jenkins"/>
+    <property name="PATH+MAVEN" value="/usr/share/maven/bin"/>
+    <property name="java.vendor.url.bug" value="Unknown"/>
+    <property name="BUILD_URL" value="http://localhost:8080/job/mavenJob/21/"/>
+    <property name="LC_NUMERIC" value="ur_PK"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="user.dir" value="/home/vend-sarosh/Documents/Web/Selenium"/>
+    <property name="JOB_URL" value="http://localhost:8080/job/mavenJob/"/>
+    <property name="LC_PAPER" value="ur_PK"/>
+    <property name="MAVEN_HOME" value="/usr/share/maven"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="BUILD_NUMBER" value="21"/>
+    <property name="JENKINS_URL" value="http://localhost:8080/"/>
+    <property name="LANG" value="en_US.UTF-8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="maven3.interceptor" value="/var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar"/>
+    <property name="WORKSPACE_TMP" value="/var/lib/jenkins/workspace/mavenJob@tmp"/>
+    <property name="WORKSPACE" value="/var/lib/jenkins/workspace/mavenJob"/>
+    <property name="maven3.interceptor.common" value="/var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar"/>
+    <property name="LC_TELEPHONE" value="ur_PK"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="USER" value="jenkins"/>
   </properties>
-  <testcase name="beforeMethod" classname="TestCases.login" time="2.968">
+  <testcase name="beforeMethod" classname="TestCases.login" time="61.912">
     <failure type="java.lang.ExceptionInInitializerError:"><![CDATA[java.lang.ExceptionInInitializerError: null
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
@@ -73,11 +129,11 @@
 	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:108)
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:106)
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:93)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:48)
-	at browserFactory.BrowserDriver.browser(BrowserDriver.java:40)
-	at browserFactory.BrowserDriver.webDriver(BrowserDriver.java:25)
-	at general.functions.<clinit>(functions.java:32)
-	at general.BaseTest.beforeMethod(BaseTest.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82)
+	at config.browserFactory.BrowserDriver.browser(BrowserDriver.java:47)
+	at config.browserFactory.BrowserDriver.webDriver(BrowserDriver.java:26)
+	at general.functions.<clinit>(functions.java:36)
+	at general.BaseTest.beforeMethod(BaseTest.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -120,12 +176,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:95)
 ]]></failure>
-    <system-out>Before Method executing
+    <system-out>before test
+Before Method executing
+/home/vend-sarosh/Documents/Web/Selenium/driver/chromedriver
 </system-out>
-    <system-err>SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}) on port 47502
+    <system-err>[main] WARN org.testng.internal.Configuration - Detected a static method [general.BaseTest.afterMethod()]. Static configuration methods can cause  unexpected behavior.
+[main] WARN org.testng.internal.Configuration - Detected a static method [general.BaseTest.beforeTest()]. Static configuration methods can cause  unexpected behavior.
+[main] WARN org.testng.internal.Configuration - Detected a static method [general.BaseTest.afterTest()]. Static configuration methods can cause  unexpected behavior.
+[main] WARN org.testng.internal.Configuration - Detected a static method [general.BaseTest.beforeMethod()]. Static configuration methods can cause  unexpected behavior.
+Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 44080
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
@@ -140,9 +199,9 @@ ChromeDriver was started successfully.
   <testcase name="loginWithInvalidCreds" classname="TestCases.login" time="0">
     <skipped/>
   </testcase>
-  <testcase name="afterMethod" classname="TestCases.login" time="0.16">
+  <testcase name="afterMethod" classname="TestCases.login" time="0.049">
     <failure message="Could not initialize class general.functions" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class general.functions
-	at general.BaseTest.afterMethod(BaseTest.java:36)
+	at general.BaseTest.afterMethod(BaseTest.java:55)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

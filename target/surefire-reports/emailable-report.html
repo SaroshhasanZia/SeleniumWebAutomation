@@ -9,23 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Phase1 Suite</th></tr>
-<tr><td><a href="#t0">Login And Logout</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">2,186</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Login Cases</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">61,313</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Phase1 Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login And Logout &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="2">TestCases.login</td><td><a href="#m0">afterMethod</a></td><td rowspan="1">1655135262086</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m1">beforeMethod</a></td><td rowspan="1">1655135259786</td><td rowspan="1">1969</td></tr><tr><th colspan="4">Login And Logout &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">TestCases.login</td><td><a href="#m2">beforeMethod</a></td><td rowspan="1">1655135261927</td><td rowspan="1">0</td></tr><tr><th colspan="4">Login And Logout &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">TestCases.login</td><td><a href="#m3">loginWithInvalidCreds</a></td><td rowspan="1">1655135261928</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">loginWithValidCreds</a></td><td rowspan="1">1655135261921</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Phase1 Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login Cases &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="2">TestCases.login</td><td><a href="#m0">afterMethod</a></td><td rowspan="1">1655452400900</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m1">beforeMethod</a></td><td rowspan="1">1655452339760</td><td rowspan="1">61080</td></tr><tr><th colspan="4">Login Cases &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">TestCases.login</td><td><a href="#m2">beforeMethod</a></td><td rowspan="1">1655452400851</td><td rowspan="1">0</td></tr><tr><th colspan="4">Login Cases &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">TestCases.login</td><td><a href="#m3">loginWithInvalidCreds</a></td><td rowspan="1">1655452400852</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">loginWithValidCreds</a></td><td rowspan="1">1655452400849</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Login And Logout</h2><h3 id="m0">TestCases.login#afterMethod</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: Could not initialize class general.functions
-	at general.BaseTest.afterMethod(BaseTest.java:36)
+<h2>Login Cases</h2><h3 id="m0">TestCases.login#afterMethod</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: Could not initialize class general.functions
+	at general.BaseTest.afterMethod(BaseTest.java:55)
 ... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">TestCases.login#beforeMethod</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ExceptionInInitializerError
-	at general.BaseTest.beforeMethod(BaseTest.java:29)
+	at general.BaseTest.beforeMethod(BaseTest.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
-  (unknown error: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: DevToolsActivePort file doesn&apos;t exist
 Build info: version: &apos;4.1.3&apos;, revision: &apos;7b1ebf28ef&apos;
-System info: host: &apos;Sarosh-450-G8&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-44-generic&apos;, java.version: &apos;11.0.15&apos;
+System info: host: &apos;Sarosh-450-G8&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-48-generic&apos;, java.version: &apos;11.0.15&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless, --no-sandbox, --disable-dev-shm-usage], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless, --no-sandbox, --disable-dev-shm-usage], extensions: []}}}]
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
@@ -38,23 +36,21 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:48)
-	at browserFactory.BrowserDriver.browser(BrowserDriver.java:40)
-	at browserFactory.BrowserDriver.webDriver(BrowserDriver.java:25)
-	at general.functions.&lt;clinit&gt;(functions.java:32)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at config.browserFactory.BrowserDriver.browser(BrowserDriver.java:47)
+	at config.browserFactory.BrowserDriver.webDriver(BrowserDriver.java:26)
+	at general.functions.&lt;clinit&gt;(functions.java:36)
 	... 42 more
 ... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">TestCases.login#beforeMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">TestCases.login#loginWithInvalidCreds</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ExceptionInInitializerError
-	at general.BaseTest.beforeMethod(BaseTest.java:29)
+	at general.BaseTest.beforeMethod(BaseTest.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
-  (unknown error: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: DevToolsActivePort file doesn&apos;t exist
 Build info: version: &apos;4.1.3&apos;, revision: &apos;7b1ebf28ef&apos;
-System info: host: &apos;Sarosh-450-G8&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-44-generic&apos;, java.version: &apos;11.0.15&apos;
+System info: host: &apos;Sarosh-450-G8&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-48-generic&apos;, java.version: &apos;11.0.15&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless, --no-sandbox, --disable-dev-shm-usage], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless, --no-sandbox, --disable-dev-shm-usage], extensions: []}}}]
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
@@ -67,22 +63,20 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:48)
-	at browserFactory.BrowserDriver.browser(BrowserDriver.java:40)
-	at browserFactory.BrowserDriver.webDriver(BrowserDriver.java:25)
-	at general.functions.&lt;clinit&gt;(functions.java:32)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at config.browserFactory.BrowserDriver.browser(BrowserDriver.java:47)
+	at config.browserFactory.BrowserDriver.webDriver(BrowserDriver.java:26)
+	at general.functions.&lt;clinit&gt;(functions.java:36)
 	... 42 more
 ... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m4">TestCases.login#loginWithValidCreds</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ExceptionInInitializerError
-	at general.BaseTest.beforeMethod(BaseTest.java:29)
+	at general.BaseTest.beforeMethod(BaseTest.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
-  (unknown error: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: DevToolsActivePort file doesn&apos;t exist
 Build info: version: &apos;4.1.3&apos;, revision: &apos;7b1ebf28ef&apos;
-System info: host: &apos;Sarosh-450-G8&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-44-generic&apos;, java.version: &apos;11.0.15&apos;
+System info: host: &apos;Sarosh-450-G8&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-48-generic&apos;, java.version: &apos;11.0.15&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless, --no-sandbox, --disable-dev-shm-usage], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--headless, --no-sandbox, --disable-dev-shm-usage], extensions: []}}}]
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
@@ -95,10 +89,10 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:48)
-	at browserFactory.BrowserDriver.browser(BrowserDriver.java:40)
-	at browserFactory.BrowserDriver.webDriver(BrowserDriver.java:25)
-	at general.functions.&lt;clinit&gt;(functions.java:32)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at config.browserFactory.BrowserDriver.browser(BrowserDriver.java:47)
+	at config.browserFactory.BrowserDriver.webDriver(BrowserDriver.java:26)
+	at general.functions.&lt;clinit&gt;(functions.java:36)
 	... 42 more
 ... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
