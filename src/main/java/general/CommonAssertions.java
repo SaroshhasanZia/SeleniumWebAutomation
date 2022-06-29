@@ -8,19 +8,19 @@ public class CommonAssertions {
     static By error = By.xpath("//h3[@data-test=\"error\"]");
     static By ProductpageCss = By.cssSelector("div.page_wrapper div:nth-child(1) div.header_container:nth-child(1) div.header_secondary_container > span.title");
 
-    public static void invalidLoginAssertion(String actual) {
+//    public static void invalidLoginAssertion(String actual) {
+//
+//        String text = functions.elementBy(error).getText();
+//        Assert.assertEquals(text,actual);
+//    }
 
-        String text = functions.elementBy(error).getText();
-        Assert.assertEquals(text,actual);
-    }
-
-    public static void validLoginAssertion(String actual){
-        textAssertion(ProductpageCss,actual);
-    }
+//    public static void validLoginAssertion(String actual){
+//        textAssertion(ProductpageCss,actual);
+//    }
 
     public static void textAssertion(By actualCss,String actual) {
 
-        String text = functions.elementBy(actualCss).getText();
+        String text = Functions.elementBy(actualCss).getText();
         Assert.assertEquals(text,actual);
     }
 

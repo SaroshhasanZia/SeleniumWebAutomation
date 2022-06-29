@@ -1,11 +1,12 @@
+general/Functions.class
 general/CommonAssertions.class
+object/MultipleTestCases.class
 general/EnvGlobals.class
-TestCases/login.class
-Test.class
+config/Properties/ProjectProperties.class
 TestCases/Cart.class
-general/functions.class
+object/Login.class
+TestCases/Login.class
 general/BaseTest.class
-object/Locators.class
 general/DatabaseConnectivity.class
 TestCases/MultipleTest.class
-config/ProjectProperties.class
+object/Cart.class

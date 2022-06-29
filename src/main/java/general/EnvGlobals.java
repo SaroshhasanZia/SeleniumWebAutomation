@@ -1,8 +1,6 @@
 package general;
 
-import config.ProjectProperties;
-
-import java.io.IOException;
+import config.Properties.ProjectProperties;
 
 public class EnvGlobals {
     public static ProjectProperties p = new ProjectProperties();

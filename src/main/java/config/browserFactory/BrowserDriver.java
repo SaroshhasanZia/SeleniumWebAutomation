@@ -26,6 +26,7 @@ public class BrowserDriver {
             WebDriver _driver = browser();
             driver = _driver;
         }
+
         return driver;
     }
 
@@ -40,11 +41,13 @@ public class BrowserDriver {
                 File fileC = new File("driver/chromedriver");
                 System.setProperty("webdriver.chrome.driver", fileC.getAbsolutePath());
                 System.out.println(fileC.getAbsolutePath());
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless"); //!!!should be enabled for Jenkins
-                options.addArguments("--no-sandbox");
-                options.addArguments("--disable-dev-shm-usage");
-                driver = new ChromeDriver(options);
+//                ChromeOptions options = new ChromeOptions();
+//                options.addArguments("--headless"); //!!!should be enabled for Jenkins
+//                options.addArguments("--no-sandbox");
+//                options.addArguments("--remote-debugging-port=9222");
+//                options.addArguments("--disable-dev-shm-usage");
+//                driver = new ChromeDriver(options);
+                driver = new ChromeDriver();
 
                 break;
 

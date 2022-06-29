@@ -3,9 +3,9 @@
 
 <suite name="Phase1 Suite">
 
-    <test name="Login Cases">
+    <test name="Test Cases">
         <classes>
-            <class name="TestCases.login">
+            <class name="TestCases.Login">
                 <methods>
                     <include name="loginWithValidCreds"></include>
                     <include name="loginWithInvalidCreds"></include>
@@ -13,13 +13,20 @@
                 </methods>
             </class>
 
+            <class name="TestCases.Cart">
+                <methods>
+                    <include name="cartQuantity"></include>
 
-<!--            <class name="Test">-->
-<!--                <methods>-->
-<!--                    <include name="test"></include>-->
+                </methods>
+            </class>
 
-<!--                </methods>-->
-<!--            </class>-->
+
+            <class name="TestCases.MultipleTest">
+                <methods>
+                    <include name="multipleTestCases"></include>
+
+                </methods>
+            </class>
 
         </classes>
     </test>

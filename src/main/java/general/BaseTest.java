@@ -1,16 +1,28 @@
 package general;
 
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.Markup;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
-import java.sql.SQLException;
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import static config.browserFactory.BrowserDriver.webDriver;
 import static general.EnvGlobals.*;
-import static general.functions.*;
+import static general.Functions.*;
 
 public class BaseTest {
 
@@ -23,35 +35,85 @@ public class BaseTest {
 
     public static ExtentTest test;
     public static ExtentReports report;
+    public static WebDriver driver;
 
+    @BeforeSuite
+    public void beforeSuite(){
 
-    @BeforeMethod
-    public static void beforeMethod() throws SQLException {
-        System.out.println("Before Method executing");
-//        updateQuery(updateQuery,dbhost,dbUser,dbPassword);
-//        selectQuery(query,dbhost,dbUser,dbPassword);
-
+//        //browser();
+        driver = webDriver();
         browseUrl(URL);
         maximizeBrowser();
 
+
+
     }
+
+
+    @BeforeMethod
+    public void beforeMethod( Method testMethod){
+
+//        browser().get(URL);
+////        browseUrl(URL);
+//        maximizeBrowser();
+
+        System.out.println("before Mehthod");
+        test = report.createTest(testMethod.getName());
+
+
+
+    }
+
+
+
+    @AfterMethod
+    public void afterMethod(ITestResult result) {
+        if(result.getStatus()== ITestResult.SUCCESS){
+            String methodName = result.getMethod().getMethodName();
+            String logText = "Test Case: " + methodName + "passed";
+            Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
+            test.log(Status.PASS,m);
+        } else if (result.getStatus()== ITestResult.FAILURE) {
+            String methodName = result.getMethod().getMethodName();
+            String logText = "Test Case: " + methodName + "failed";
+            Markup m = MarkupHelper.createLabel(logText,ExtentColor.RED);
+            test.log(Status.FAIL,m);
+        }
+
+    }
+
+
 
     @BeforeTest
-    public static void beforeTest(){
-        System.out.println("before test");
-        report = new ExtentReports(System.getProperty("user.dir")+"/reports/ExtentReport-"+ new SimpleDateFormat("yyyy-MM-dd'T'HH-mm-ss").format(Calendar.getInstance().getTime())+".html");
+    public void beforeTest(){
+//        browseUrl(URL);
+//        maximizeBrowser();
+        System.out.println("before test called");
+        ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir")+"/reports/ExtentReport-"+ new SimpleDateFormat("yyyy-MM-dd'T'HH-mm-ss").format(Calendar.getInstance().getTime())+".html");
+        spark.config().setEncoding("utf-8");
+        spark.config().setDocumentTitle("AutoReport");
+        spark.config().setReportName("My1stReport");
+        spark.config().setTheme(Theme.DARK);
+        report = new ExtentReports();
+        report.attachReporter(spark);
+        report.setSystemInfo("Tester","Sarosh");
 
     }
+
 
     @AfterTest
-    public static void afterTest(){
+    public  void afterTest(){
         report.flush();
+        System.out.println("after test called");
+
+
     }
+
 
 
 
     @AfterSuite
-    public static void afterMethod(){
+    public  void afterMethod(){
     closeAllTab();
 
 
