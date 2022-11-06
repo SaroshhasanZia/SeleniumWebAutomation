@@ -5,6 +5,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import java.util.Objects;
+
 import static reports.ReportManager.unload;
 
 public class ExtentReport {
@@ -15,13 +16,12 @@ public class ExtentReport {
     public static void initReport() {
         if (Objects.isNull(extent)) {
             extent = new ExtentReports();
-            ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir") + "/index.html");
+            ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir") +"/reports"+ "/automationReport.html");
             spark.config().setTheme(Theme.DARK);
             spark.config().setReportName("Web Automation Report");
-            spark.config().setDocumentTitle("Tests");
+            spark.config().setDocumentTitle("Tests Cases");
             extent.attachReporter(spark);
         }
-        else System.out.print("Report is NUll");
     }
 
 

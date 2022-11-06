@@ -4,15 +4,16 @@ package utils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import static config.DriverManager.DriverManager.getDriver;
+import static config.browserFactory.DriverManager.getDriver;
 
 
 public final class ScreenShotUtils {
 
-    private ScreenShotUtils(){}
+    private ScreenShotUtils() {
+    }
 
-    public static String getBase64Image(){
-        return   ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);
+    public static String getBase64Image() {
+        return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);
     }
 }
 

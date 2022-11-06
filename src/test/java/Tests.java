@@ -31,7 +31,7 @@ public class Tests {
         h.browseWebsite();
         h.navigationBarSelection(navBarSelection);
         h.clickOnDealsCategory(dealsCategory);
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
         h.selectCategory(category);
         h.selectItem(itemNumber);
         h.getItemTitle();
