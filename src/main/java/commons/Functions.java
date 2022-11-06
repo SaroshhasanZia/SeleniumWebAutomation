@@ -6,9 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import static commons.Waits.waitUntilElementIsClickable;
-import static config.browserFactory.DriverManager.getDriver;
-
-import static org.openqa.selenium.By.*;
+import static driver.DriverManager.getDriver;
 
 
 public class Functions {

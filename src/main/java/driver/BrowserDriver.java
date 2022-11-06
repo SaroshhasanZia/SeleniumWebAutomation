@@ -1,4 +1,4 @@
-package config.browserFactory;
+package driver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import java.net.MalformedURLException;
 import java.util.Objects;
 
-import static config.browserFactory.DriverManager.*;
 import static java.util.Objects.nonNull;
 import static utils.ProjectPropertiesUtil.getProperties;
 
@@ -17,7 +16,7 @@ public final class BrowserDriver {
 
     public static void initDriver() throws MalformedURLException {
 
-        if (Objects.isNull(getDriver())) {
+        if (Objects.isNull(DriverManager.getDriver())) {
 
             switch (getProperties("browser")) {
 
@@ -25,13 +24,13 @@ public final class BrowserDriver {
                 case "chrome":
 
                     driver = WebDriverManager.chromedriver().create();
-                    setDriver(driver);
+                    DriverManager.setDriver(driver);
                     break;
 
                 case "firefox":
 
                     driver = WebDriverManager.firefoxdriver().create();
-                    setDriver(driver);
+                    DriverManager.setDriver(driver);
                     break;
 
             }
@@ -39,9 +38,9 @@ public final class BrowserDriver {
     }
 
     public static void driverUnload() {
-        if (nonNull(getDriver())) {
-            getDriver().quit();
-            unloadDriver();
+        if (nonNull(DriverManager.getDriver())) {
+            DriverManager.getDriver().quit();
+            DriverManager.unloadDriver();
         }
     }
 

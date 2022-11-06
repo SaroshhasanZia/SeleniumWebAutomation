@@ -9,8 +9,8 @@ import org.testng.ITestResult;
 import java.net.MalformedURLException;
 
 import static commons.Waits.waitInit;
-import static config.browserFactory.BrowserDriver.driverUnload;
-import static config.browserFactory.BrowserDriver.initDriver;
+import static driver.BrowserDriver.driverUnload;
+import static driver.BrowserDriver.initDriver;
 import static reports.ExtentLogger.*;
 import static reports.ExtentReport.*;
 
