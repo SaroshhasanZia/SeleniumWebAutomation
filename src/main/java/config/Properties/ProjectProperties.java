@@ -9,7 +9,7 @@ public class ProjectProperties {
 
 
 
-    public static String GetProperties(String value) {
+    public static String getProperties(String value) {
         String property;
         try {
             Properties p = new Properties();

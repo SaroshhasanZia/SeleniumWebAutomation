@@ -3,27 +3,22 @@
 
 <suite name="Phase1 Suite">
 
-    <test name="Test Cases">
-        <classes>
-            <class name="TestCases.Login">
+    <listeners>
+        <listener class-name="listeners.Listener"></listener>
+    </listeners>
+
+<!--    <test name="Test" >-->
+    <test thread-count="1" name="Test" >
+
+    <classes>
+            <class name="Tests">
                 <methods>
-                    <include name="loginWithValidCreds"></include>
-                    <include name="loginWithInvalidCreds"></include>
-
-                </methods>
-            </class>
-
-            <class name="TestCases.Cart">
-                <methods>
-                    <include name="cartQuantity"></include>
-
-                </methods>
-            </class>
+                    <include name="userLoginWithUnregisteredEmail"></include>
+                    <include name="toVerifyItemsAreAddedToCartCorrectly"></include>
+                    <include name="toVerifyAccountListItems"></include>
 
 
-            <class name="TestCases.MultipleTest">
-                <methods>
-                    <include name="multipleTestCases"></include>
+
 
                 </methods>
             </class>

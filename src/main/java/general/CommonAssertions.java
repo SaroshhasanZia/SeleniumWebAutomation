@@ -2,6 +2,9 @@ package general;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
+import static general.Functions.getTextFromElement;
+import static general.Functions.removeNonNumericCharacters;
+
 public class CommonAssertions {
 
 
@@ -18,10 +21,37 @@ public class CommonAssertions {
 //        textAssertion(ProductpageCss,actual);
 //    }
 
-    public static void textAssertion(By actualCss,String actual) {
+    public static void textAssertion(By element,String expected) {
 
-        String text = Functions.elementBy(actualCss).getText();
-        Assert.assertEquals(text,actual);
+        String text = Functions.elementBy(element).getText();
+        Assert.assertEquals(text,expected);
+
+    }
+
+
+    public static void intValueAssertion(By element,int expected) {
+
+        String text = getTextFromElement(element);
+        int value = Integer.parseInt(removeNonNumericCharacters(text));
+        Assert.assertEquals(value,expected);
+
+    }
+
+    public static void floatValueAssertion(By element,float expected) {
+
+        String text = getTextFromElement(element);
+        Float value = Float.parseFloat(removeNonNumericCharacters(text));
+        Assert.assertEquals(value,expected);
+
+    }
+
+
+
+    public static void elementsTextAssertion(By element1,By element2) {
+
+        String actual = Functions.elementBy(element1).getText();
+        String expected = Functions.elementBy(element2).getText();
+        Assert.assertEquals(actual,expected);
     }
 
 

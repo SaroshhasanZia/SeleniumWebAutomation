@@ -4,7 +4,7 @@ import general.BaseTest;
 import static general.Functions.*;
 import static java.lang.Thread.sleep;
 import static general.EnvGlobals.*;
-import static object.MultipleTestCases.*;
+import static pages.MultipleTestCases.*;
 
 import org.testng.annotations.Test;
 
@@ -22,6 +22,7 @@ public class MultipleTest extends BaseTest  {
         login(username,password);
         contactSales();
         formFill();
+        clickNotificationButton();
         clickFacebookButton();
         switchToChildWindow();
         facebookAssertion();

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 
 import static general.EnvGlobals.*;
-import static object.Cart.*;
+import static pages.Cart.*;
 
 
 public class Cart extends BaseTest {

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import static general.EnvGlobals.password;
 import static general.EnvGlobals.username;
 import static general.EnvGlobals.*;
-import static object.Login.*;
+import static pages.Loginold.*;
 
 
 public class Login extends BaseTest {

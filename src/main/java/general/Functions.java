@@ -18,8 +18,11 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Set;
 import general.BaseTest.*;
+import org.testng.Assert;
 
-import static config.browserFactory.BrowserDriver.webDriver;
+
+import static commons.Waits.waitUntilElementIsClickable;
+import static config.DriverManager.DriverManager.getDriver;
 
 import static org.openqa.selenium.By.*;
 
@@ -36,43 +39,49 @@ public class Functions {
 //        return driver;
 //    }
 
-   public static WebDriver driver = BaseTest.driver;
+//   public static WebDriver driver = getDriver();
 
 
 
     public static void browseUrl(String url){
-        driver.get(url);
+        getDriver().get(url);
+    }
+
+
+    public static String getXpath(String xpath, String value){
+        return String.format(xpath, value);
+
     }
 
     public static void maximizeBrowser(){
-        driver.manage().window().maximize();
+        getDriver().manage().window().maximize();
     }
 
 
 
     public static void quitBrowser(){
-        driver.quit();
+        getDriver().quit();
     }
 
     public static void closeBrowser(){
-        driver.close();
+        getDriver().close();
     }
 
-    public static < T > WebElement elementById(T value){
-        WebElement element = driver.findElement(id ((String) value));
+    public static  WebElement elementById(String value){
+        WebElement element = getDriver().findElement(id ((String) value));
         return element;
     }
 
     public static < T > WebElement elementByXpath(T value){
-        WebElement element = driver.findElement(xpath((String) value));
+        WebElement element = getDriver().findElement(xpath((String) value));
         return element;
     }
     public static WebElement FindElementByXpath(By Locator){
-        WebElement element = driver.findElement(Locator);
+        WebElement element = getDriver().findElement(Locator);
         return element;
     }
     public static < T > WebElement elementBy(By value){
-        WebElement element = driver.findElement(value);
+        WebElement element = getDriver().findElement(value);
         return element;
     }
 
@@ -84,7 +93,7 @@ public class Functions {
     public static void click(By element){
 
         try{
-            explicitWait(element);
+            waitUntilElementIsClickable(element);
             {
                 elementBy(element).click();
 
@@ -92,6 +101,8 @@ public class Functions {
         }
         catch (Exception e){
             e.printStackTrace();
+            Assert.fail("element not located: "+element);
+
         }
 
 
@@ -100,7 +111,7 @@ public class Functions {
 
     public static  void sendKeys(By element,String text ){
     try{
-        explicitWait(element);
+        waitUntilElementIsClickable(element);
         {
             elementBy(element).sendKeys(text);
 
@@ -112,10 +123,21 @@ public class Functions {
 
     }
 
-    public static < T > void selectElement(By locator,String value){
+    public static void selectElement(By locator,String value){
 
-        Select items = new Select(elementBy(locator));
-        items.selectByValue(value);
+        try{
+            waitUntilElementIsClickable(locator);
+            {
+                Select items = new Select(elementBy(locator));
+                items.selectByValue(value);
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            Assert.fail("element not located");
+        }
+
+
     }
 
 
@@ -184,25 +206,15 @@ public class Functions {
     }
 
 
-    public static void implicitWait(){
-        Duration d = Duration.ofSeconds(10);
-        driver.manage().timeouts().implicitlyWait(d);
-    }
 
-    public static void explicitWait(By locator){
-        Duration d = Duration.ofSeconds(10);
-        WebDriverWait wait = new WebDriverWait(driver,d);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-
-    }
 
 
     public static void hoverAndClick(By locatorOne, By locatortwo){
-        Actions actions = new Actions(driver);
-        WebElement menu = driver.findElement(locatorOne);
+        Actions actions = new Actions(getDriver());
+        WebElement menu = getDriver().findElement(locatorOne);
         actions.moveToElement(menu);
 
-        WebElement subMenu = driver.findElement(locatortwo);
+        WebElement subMenu = getDriver().findElement(locatortwo);
         actions.moveToElement(subMenu);
         actions.click().build().perform();
     }
@@ -210,14 +222,15 @@ public class Functions {
 
 
     public static void ScrollTo(By locator){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", elementBy(locator));
 
 
     }
 
     public static void navigateBack(){
-        driver.navigate().back();
+
+        getDriver().navigate().back();
     }
 
 //    public static void scrollDown() {
@@ -232,41 +245,12 @@ public class Functions {
 
     public static void moveTo(By locator){
 
-        Actions a = new Actions(driver);
+        Actions a = new Actions(getDriver());
         a.moveToElement(elementBy(locator));
         a.perform();
 
     }
 
-//    public static void scrollUntill(By locator){
-//
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        Duration d = Duration.ofSeconds(3);
-//        WebDriverWait wait = new WebDriverWait(driver,d);
-//        int i = 1;
-//
-//        while(i<5) {
-//            js.executeScript("window.scrollBy(0,100)");
-////            try {
-////                wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-////
-////            }
-////
-////            catch (TimeoutException t){
-////                throw new RuntimeException(t);
-////            }
-//            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
-//
-//            if(element!=null){
-//                break;
-//            }
-//            i += 1;
-//
-//
-//
-//
-//
-//        }
 
 
 
@@ -276,7 +260,7 @@ public class Functions {
 //    }
 
     public static void scrollAndClick(By locator) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
 
         int i = 0;
 
@@ -307,7 +291,7 @@ public class Functions {
 
 
     public static void getScreenShot() throws IOException {
-        TakesScreenshot scr = (TakesScreenshot) driver;
+        TakesScreenshot scr = (TakesScreenshot) getDriver();
         File scrFile = scr.getScreenshotAs(OutputType.FILE);
         File dest = new  File("/home/vend-sarosh/Documents/Web/Selenium/screenshots/file"+randomNumber()+".jpg");
 
@@ -321,35 +305,45 @@ public class Functions {
 
 
     public static  void closeAllTab(){
-        Set<String> w = driver.getWindowHandles();
+        Set<String> w = getDriver().getWindowHandles();
         for (String i : w){
-            driver.switchTo().window(i);
-            driver.close();
+            getDriver().switchTo().window(i);
+            getDriver().close();
 
         }
     }
 
 
     public static void switchToParentWindow() {
-        ArrayList<String> tab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(tab.get(0));
+        ArrayList<String> tab = new ArrayList<>(getDriver().getWindowHandles());
+        getDriver().switchTo().window(tab.get(0));
         }
 
     public static void switchToChildWindow() {
-        ArrayList<String> tab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(tab.get(1));
+        ArrayList<String> tab = new ArrayList<>(getDriver().getWindowHandles());
+        getDriver().switchTo().window(tab.get(1));
     }
 
 
 
-    public static void driverQuit(){
-        driver.quit();
-    }
 
 
 
     public static void clear(By element){
         elementBy(element).clear();
+    }
+
+    public static String removeNonNumericCharacters(String value){
+        return value.replaceAll("[^\\d.]", "");
+    }
+
+    public static String getTextFromElement(By by){
+
+        return elementBy(by).getText();
+    }
+
+    public static String getTextFromElementByInnerText(By by){
+        return elementBy(by).getAttribute("innerText");
     }
 
 }
