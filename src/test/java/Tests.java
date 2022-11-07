@@ -5,14 +5,14 @@ import pages.Login;
 
 public class Tests {
 
-    private static String email = "saroshhasanzia@gmail.com";
-    private static String alertMessage = "We cannot find an account with that email address";
-    private static String navBarSelection = "Today's Deals";
-    private static String dealsCategory = "2";
-    private static String category = "2";
-    private static String itemNumber = "1";
-    private static String itemQuantity = "3";
-    private static String itemsAddedSuccesMsg = "Added to Cart";
+    private static final String email = "saroshhasanzia@gmail.com";
+    private static final String alertMessage = "We cannot find an account with that email address";
+    private static final String navBarSelection = "Today's Deals";
+    private static final String dealsCategory = "2";
+    private static final String category = "2";
+    private static final String itemNumber = "1";
+    private static final String itemQuantity = "3";
+    private static final String itemsAddedSuccesMsg = "Added to Cart";
 
 
     @Test(description = "Verify user can’t login with valid but not registered email")
@@ -31,7 +31,11 @@ public class Tests {
         h.browseWebsite();
         h.navigationBarSelection(navBarSelection);
         h.clickOnDealsCategory(dealsCategory);
-//        Thread.sleep(2000);
+
+        //Putting in thread.sleep because the page reloads after deal selection however the locator is clicked during the load.
+        //The ideal handling for this case would be to wait for the page to completely load and the perform click.
+        Thread.sleep(2000);
+
         h.selectCategory(category);
         h.selectItem(itemNumber);
         h.getItemTitle();

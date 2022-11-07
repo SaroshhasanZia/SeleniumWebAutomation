@@ -1,18 +1,19 @@
 package commons;
 
-import commons.Functions;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import utils.BrowserUtils;
 
-import static commons.Functions.getTextFromElement;
-import static commons.Functions.removeNonNumericCharacters;
+import static utils.BrowserUtils.getTextFromElement;
+import static utils.BrowserUtils.removeNonNumericCharacters;
 
 public class CommonAssertions {
 
 
     public static void textAssertion(By element, String expected) {
 
-        String text = Functions.elementBy(element).getText();
+        String text = BrowserUtils.elementBy(element).getText();
         Assert.assertEquals(text, expected);
 
     }
@@ -33,14 +34,4 @@ public class CommonAssertions {
         Assert.assertEquals(value, expected);
 
     }
-
-
-    public static void elementsTextAssertion(By element1, By element2) {
-
-        String actual = Functions.elementBy(element1).getText();
-        String expected = Functions.elementBy(element2).getText();
-        Assert.assertEquals(actual, expected);
-    }
-
-
 }

@@ -1,15 +1,16 @@
-package commons;
+package utils;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import static commons.Waits.waitUntilElementIsClickable;
+import static utils.WaitUtils.waitUntilElementIsClickable;
 import static driver.DriverManager.getDriver;
 
 
-public class Functions {
+public class BrowserUtils {
 
 
     public static void browseUrl(String url) {
@@ -27,8 +28,7 @@ public class Functions {
     }
 
     public static WebElement elementBy(By value) {
-        WebElement element = getDriver().findElement(value);
-        return element;
+        return getDriver().findElement(value);
     }
 
 

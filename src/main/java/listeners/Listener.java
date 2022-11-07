@@ -8,7 +8,7 @@ import org.testng.ITestResult;
 
 import java.net.MalformedURLException;
 
-import static commons.Waits.waitInit;
+import static utils.WaitUtils.waitInit;
 import static driver.BrowserDriver.driverUnload;
 import static driver.BrowserDriver.initDriver;
 import static reports.ExtentLogger.*;
@@ -49,8 +49,6 @@ public class Listener implements ITestListener, ISuiteListener {
         }
         waitInit();
         initReport();
-
-
     }
 
     @Override
@@ -58,6 +56,4 @@ public class Listener implements ITestListener, ISuiteListener {
         tearDownReport();
         driverUnload();
     }
-
-
 }

@@ -30,6 +30,8 @@ RUN TEST CASE:
 In order to run the test cases the class name and test method will be provided in the testng.xml file. 
 The test will be run through testng.xml file.
 
+The test cases will be executed on google chrome browser.
+
 After the test has been run a report will be generated which contains information about the passed and failed test cases. In case the test has failed 
 a snapshot of that web page will be taken and attached with report along with failure logs. The report could be found under /Web/Selenium/reports.
 
