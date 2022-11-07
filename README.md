@@ -12,11 +12,11 @@ CODE STRUCTURE:
 
 4- webdriver configurations, thread safety and driver getter are defined in the src/main/java/driver package.
 
-5- all reuseable functions for the Webelements are defined in src/main/java/commons/Functions class.
+5- all reuseable browser functions for the Webelements are defined in src/main/java/utils/BrowserUtils class.
 
 6- all reuseable Assertions for the Webelements are defined in src/main/java/commons/CommonAssertions class.
 
-7- all types of reuseable waits for the Webelements are defined in src/main/java/commons/Waits class.
+7- all types of reuseable waits for the Webelements are defined in src/main/utils//WaitUtils class.
 
 8- all report configuration and setup are defined in src/main/java/reports package.
 
