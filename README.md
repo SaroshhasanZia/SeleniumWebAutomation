@@ -16,7 +16,7 @@ CODE STRUCTURE:
 
 6- all reuseable Assertions for the Webelements are defined in src/main/java/commons/CommonAssertions class.
 
-7- all types of reuseable waits for the Webelements are defined in src/main/utils//WaitUtils class.
+7- all types of reuseable waits for the Webelements are defined in src/main/java/utils//WaitUtils class.
 
 8- all report configuration and setup are defined in src/main/java/reports package.
 
