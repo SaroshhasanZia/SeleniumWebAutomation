@@ -32,8 +32,10 @@ public class Tests {
         h.navigationBarSelection(navBarSelection);
         h.clickOnDealsCategory(dealsCategory);
 
-        //Putting in thread.sleep because the page reloads after deal selection however the locator is clicked during the load.
-        //The ideal handling for this case would be to wait for the page to completely load and the perform click.
+        //Putting in thread.sleep because the page reloads after deals selection however the locator is clicked during the load.
+        //The ideal handling for this case would be to wait for the page to completely load and the perform click due to time constraint this is not
+        // incorportated right now
+
         Thread.sleep(2000);
 
         h.selectCategory(category);
